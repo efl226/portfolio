@@ -25,7 +25,13 @@
                         <div><span>Year</span>2024</div>
                     </div>
                 </header>
-                <img src="https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal">
+                <!-- Added onerror fallback to help debug -->
+                <img 
+                    src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/ContentHubPhoto.png" 
+                    class="full-width-img reveal" 
+                    onerror="this.onerror=null; this.src='https://via.placeholder.com/2000x1000/1a1a1a/b7ff00?text=IMAGE+NOT+FOUND+(CHECK+REPO+PRIVACY)';"
+                    alt="Ipsos Content Hub Interface"
+                >
                 <section class="cs-section reveal">
                     <div class="cs-grid-2">
                         <div><span class="cs-label">The Challenge</span><h2 class="cs-big-text">Overcoming Enterprise Scale & Decentralization</h2></div>
@@ -35,7 +41,11 @@
                 <section class="cs-section reveal">
                     <span class="cs-label">The Hybrid Strategy</span><h2 class="cs-big-text" style="margin-bottom: 4rem;">Backend Engineering meets UX</h2>
                     <div class="cs-grid-2">
-                        <div class="cs-tech-diagram"><h4 style="color: white; margin-bottom: 1rem;">// THE BACKEND PIVOT</h4><p>Bypassed SharePoint limitations by re-engineering the pipeline to communicate directly with the Search API via custom HTTP requests.</p><div class="code-snippet"><span class="fn">async function</span> <span class="hl">syncPipeline</span>() {<br>&nbsp;&nbsp;<span class="hl">const</span> vectors = <span class="fn">await</span> vertexAI.embed(docs);<br>&nbsp;&nbsp;<span class="hl">return</span> searchIndex.update(vectors);<br>}</div></div>
+                        <div class="cs-tech-diagram"><h4 style="color: white; margin-bottom: 1rem;">// THE BACKEND PIVOT</h4><p>Bypassed SharePoint limitations by re-engineering the pipeline through Power Automate to communicate directly with the Search API via custom HTTP requests.</p><img 
+                                src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/Screenshot%202025-08-07%20131821.png" 
+                                style="display: block; margin: 2rem auto 0 auto; width: 50%; border: 1px solid var(--border);" 
+                                alt="Backend Architecture Diagram"
+                            ></div>
                         <div><h4 style="color: white; margin-bottom: 1rem; text-transform: uppercase;">User-Centric Framework</h4><p style="color: #aaa; margin-bottom: 2rem;">I didn't just build a database; I built a product. Using the "Jobs To Be Done" (JTBD) framework, I mapped distinct user journeys for six specific roles.</p><div style="background: var(--surface); padding: 2rem; border-left: 2px solid var(--accent);"><strong style="color: white; display: block; margin-bottom: 0.5rem;">Intelligent Indexing</strong><p style="font-size: 0.9rem; color: #888;">Structured data for Google Vertex AI Search, allowing the system to index not just titles, but the actual contents of the documents.</p></div></div>
                     </div>
                 </section>
