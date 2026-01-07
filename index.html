@@ -17,13 +17,12 @@
     <nav id="main-nav">
         <div class="logo" onclick="showHome()">D.ENG</div>
         <div class="nav-links">
-            <a href="#work" onclick="showHome()">Archive</a>
-            <a href="#about">Studio</a>
-            <a href="#contact">Contact</a>
+            <a onclick="showHome()">Archive</a>
+            <a onclick="showAbout()">About</a>
         </div>
     </nav>
 
-    <!-- HOME VIEW (Reverted Style) -->
+    <!-- HOME VIEW -->
     <div id="home-view">
         <section class="hero">
             <h1 class="reveal">Design <br> <span class="outline">& Machine</span></h1>
@@ -32,65 +31,65 @@
 
         <div class="marquee">
             <div class="marquee-content">
-                REACT • TYPESCRIPT • INDUSTRIAL DESIGN • C++ • FIGMA • MOTION • THREE.JS • 3D PRINTING • REACT • TYPESCRIPT • INDUSTRIAL DESIGN • C++ • FIGMA • MOTION • THREE.JS • 3D PRINTING •
+                REACT • TYPESCRIPT • INDUSTRIAL DESIGN • C++ • FIGMA • MOTION • THREE.JS • 3D PRINTING • VERTEX AI • POWER AUTOMATE • REACT • TYPESCRIPT • INDUSTRIAL DESIGN •
             </div>
         </div>
 
         <section id="work" class="container">
             <div class="work-grid">
-                <!-- Project 1 -->
-                <div class="project-card reveal" onclick="openProject('p1')">
+                <!-- Project 1: IPSOS -->
+                <div class="project-card reveal" onclick="openProject('ipsos')">
                     <div class="img-wrapper">
-                        <img src="https://www.usailighting.com/stuff/contentmgr/files/4/eff41788426238be72adec33178e2b5f/image/ipsos200park_pho_002_web_large.jpg" alt="Ipsos Office NYC">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Ipsos Hub">
                     </div>
                     <div class="project-meta">
                         <div>
                             <span class="project-number">01</span>
-                            <h3>Luminal</h3>
+                            <h3>Ipsos Growth Hub</h3>
                         </div>
-                        <p>UX/UI + ID</p>
+                        <p>AI Architecture + Enterprise UX</p>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card reveal" onclick="openProject('p2')">
+                <!-- Project 2: SWAY -->
+                <div class="project-card reveal" onclick="openProject('sway')">
                     <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=KINETIX" alt="Project">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt="Sway Platform">
                     </div>
                     <div class="project-meta">
                         <div>
                             <span class="project-number">02</span>
-                            <h3>Kinetix</h3>
+                            <h3>Sway</h3>
                         </div>
-                        <p>Hardware</p>
+                        <p>Product Management + FinTech</p>
                     </div>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project-card reveal" onclick="openProject('p3')">
+                
+                 <!-- Project 3: BARDIVE -->
+                <div class="project-card reveal" onclick="openProject('bardive')">
                     <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=ECOSTAT" alt="Project">
+                        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=1600&auto=format&fit=crop" alt="BarDive App">
                     </div>
                     <div class="project-meta">
                         <div>
                             <span class="project-number">03</span>
-                            <h3>EcoStat</h3>
+                            <h3>BarDive</h3>
                         </div>
-                        <p>Engineering</p>
+                        <p>Mobile App + Startup Strategy</p>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card reveal" onclick="openProject('p1')">
+                <!-- Project 4: RESONANT DESIGN -->
+                <div class="project-card reveal" onclick="openProject('resonant')">
                     <div class="img-wrapper">
-                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=SYSTRM" alt="Project">
+                        <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=1600&auto=format&fit=crop" alt="Resonant Design">
                     </div>
                     <div class="project-meta">
                         <div>
                             <span class="project-number">04</span>
-                            <h3>Systrm</h3>
+                            <h3>ResonantDesign</h3>
                         </div>
-                        <p>Automation</p>
+                        <p>NLP Data Engineering + React</p>
                     </div>
                 </div>
             </div>
@@ -101,50 +100,90 @@
         </footer>
     </div>
 
-    <!-- INDIVIDUAL PROJECT VIEW (Maintained Version) -->
-    <div id="project-view">
-        <div class="back-nav">
-            <button class="back-btn" onclick="showHome()">← Archive</button>
-        </div>
-
-        <header class="detail-hero-section">
-            <h1 class="detail-title reveal" id="p-title">Project</h1>
-            <div class="detail-meta-strip reveal">
-                <div><span>Role</span><div id="p-role">Designer</div></div>
-                <div><span>Tech</span><div id="p-tech-list">React, C++</div></div>
-                <div><span>Year</span><div>2024</div></div>
-            </div>
-        </header>
-
-        <section class="project-content-block">
-            <div class="two-col-layout reveal">
-                <div>
-                    <span class="content-label">The Objective</span>
+    <!-- ABOUT VIEW -->
+    <div id="about-view">
+        
+        <!-- Section 1: Bio -->
+        <section class="about-section">
+            <div class="about-bio-grid">
+                <div class="bio-text reveal">
+                    <h2>The Logic<br>Behind the Pixel</h2>
+                    <p>I am a multidisciplinary designer and engineer obsessed with the intersection of hardware and software. My approach focuses on stripping away the unnecessary to reveal the functional core of a product. Whether it's a physical device or a digital interface, I believe good design is engineered, not just decorated.</p>
                 </div>
-                <div>
-                    <p class="large-p" id="p-objective">Objective text goes here...</p>
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000" class="bio-img" alt="Profile">
                 </div>
-            </div>
-
-            <img src="" id="p-hero" class="full-img reveal">
-
-            <div class="two-col-layout reveal">
-                <div>
-                    <span class="content-label">Technical Architecture</span>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">How the logic supports the aesthetic.</p>
-                </div>
-                <div class="tech-block" id="p-logic">
-                    // Logic breakdown here
-                </div>
-            </div>
-
-            <span class="content-label reveal">Process & Iteration</span>
-            <div class="process-gallery reveal">
-                <div class="gallery-item wide"><img src="https://via.placeholder.com/1200x600/141414/666?text=Sketch+Process"></div>
-                <div class="gallery-item"><img src="https://via.placeholder.com/600x400/141414/666?text=Prototype+V1"></div>
-                <div class="gallery-item"><img src="https://via.placeholder.com/600x400/141414/666?text=UI+Flow"></div>
             </div>
         </section>
+
+        <!-- Section 2: Career & Skills -->
+        <section class="about-section">
+            <div class="career-grid">
+                <div class="reveal">
+                    <h3 class="cs-label" style="margin-bottom: 3rem;">Career So Far</h3>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023 - PRESENT</span>
+                        <div class="timeline-role">Lead Technical Architect</div>
+                        <div class="timeline-company">Ipsos North America</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2022 - 2023</span>
+                        <div class="timeline-role">Co-Founder & Lead Designer</div>
+                        <div class="timeline-company">BarDive (Seed Funded)</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2021 - 2022</span>
+                        <div class="timeline-role">Product Designer</div>
+                        <div class="timeline-company">Sway FinTech</div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <h3 class="cs-label" style="margin-bottom: 3rem;">Technical Arsenal</h3>
+                    <div class="skills-container">
+                        <div class="skill-tag">React / Next.js</div>
+                        <div class="skill-tag">TypeScript</div>
+                        <div class="skill-tag">Python (NLP)</div>
+                        <div class="skill-tag">C++ (Embedded)</div>
+                        <div class="skill-tag">Figma / UI Design</div>
+                        <div class="skill-tag">SolidWorks / CAD</div>
+                        <div class="skill-tag">Three.js / WebGL</div>
+                        <div class="skill-tag">Google Vertex AI</div>
+                        <div class="skill-tag">Product Strategy</div>
+                        <div class="skill-tag">Rapid Prototyping</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Resume -->
+        <section class="resume-section reveal">
+            <h3 class="cs-label">Full Resume</h3>
+            <!-- Placeholder for Resume Image -->
+            <img src="https://via.placeholder.com/1200x1500/1a1a1a/555?text=RESUME+PREVIEW+IMAGE" class="resume-img">
+            <button class="back-btn" style="border-color: var(--accent); color: var(--accent);">Download PDF</button>
+        </section>
+
+        <!-- Section 4: Contact -->
+        <div class="contact-block reveal">
+            <div class="contact-item">
+                <span>EMAIL</span>
+                <a href="#">hello@d-eng.com</a>
+            </div>
+            <div class="contact-item">
+                <span>LINKEDIN</span>
+                <a href="#">/in/designer-eng</a>
+            </div>
+            <div class="contact-item">
+                <span>GITHUB</span>
+                <a href="#">@git-builder</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- DYNAMIC PROJECT CONTAINER -->
+    <div id="project-view">
+        <!-- Content injected via JS -->
     </div>
 
     <script src="js/script.js"></script>
