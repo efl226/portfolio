@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <!-- CSS Refs -->
+    <link type="text/css" href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+   
+    <div id="cursor"></div>
+    <div class="glow"></div>
 
+    <!-- GLOBAL NAV -->
+    <nav id="main-nav">
+        <div class="logo" onclick="showHome()">D.ENG</div>
+        <div class="nav-links">
+            <a href="#work" onclick="showHome()">Archive</a>
+            <a href="#about">Studio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HOME VIEW (Reverted Style) -->
+    <div id="home-view">
+        <section class="hero">
+            <h1 class="reveal">Design <br> <span class="outline">& Machine</span></h1>
+            <p class="reveal">Bridging the gap between physical industrial design and high-performance engineering logic.</p>
+        </section>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                REACT • TYPESCRIPT • INDUSTRIAL DESIGN • C++ • FIGMA • MOTION • THREE.JS • 3D PRINTING • REACT • TYPESCRIPT • INDUSTRIAL DESIGN • C++ • FIGMA • MOTION • THREE.JS • 3D PRINTING •
+            </div>
+        </div>
+
+        <section id="work" class="container">
+            <div class="work-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal" onclick="openProject('p1')">
+                    <div class="img-wrapper">
+                        <img src="https://www.usailighting.com/stuff/contentmgr/files/4/eff41788426238be72adec33178e2b5f/image/ipsos200park_pho_002_web_large.jpg" alt="Ipsos Office NYC">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <span class="project-number">01</span>
+                            <h3>Luminal</h3>
+                        </div>
+                        <p>UX/UI + ID</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal" onclick="openProject('p2')">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=KINETIX" alt="Project">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <span class="project-number">02</span>
+                            <h3>Kinetix</h3>
+                        </div>
+                        <p>Hardware</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal" onclick="openProject('p3')">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=ECOSTAT" alt="Project">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <span class="project-number">03</span>
+                            <h3>EcoStat</h3>
+                        </div>
+                        <p>Engineering</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal" onclick="openProject('p1')">
+                    <div class="img-wrapper">
+                        <img src="https://via.placeholder.com/800x1000/0a0a0a/ffffff?text=SYSTRM" alt="Project">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <span class="project-number">04</span>
+                            <h3>Systrm</h3>
+                        </div>
+                        <p>Automation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="reveal">
+            <h2>Get In Touch</h2>
+        </footer>
+    </div>
+
+    <!-- INDIVIDUAL PROJECT VIEW (Maintained Version) -->
+    <div id="project-view">
+        <div class="back-nav">
+            <button class="back-btn" onclick="showHome()">← Archive</button>
+        </div>
+
+        <header class="detail-hero-section">
+            <h1 class="detail-title reveal" id="p-title">Project</h1>
+            <div class="detail-meta-strip reveal">
+                <div><span>Role</span><div id="p-role">Designer</div></div>
+                <div><span>Tech</span><div id="p-tech-list">React, C++</div></div>
+                <div><span>Year</span><div>2024</div></div>
+            </div>
+        </header>
+
+        <section class="project-content-block">
+            <div class="two-col-layout reveal">
+                <div>
+                    <span class="content-label">The Objective</span>
+                </div>
+                <div>
+                    <p class="large-p" id="p-objective">Objective text goes here...</p>
+                </div>
+            </div>
+
+            <img src="" id="p-hero" class="full-img reveal">
+
+            <div class="two-col-layout reveal">
+                <div>
+                    <span class="content-label">Technical Architecture</span>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">How the logic supports the aesthetic.</p>
+                </div>
+                <div class="tech-block" id="p-logic">
+                    // Logic breakdown here
+                </div>
+            </div>
+
+            <span class="content-label reveal">Process & Iteration</span>
+            <div class="process-gallery reveal">
+                <div class="gallery-item wide"><img src="https://via.placeholder.com/1200x600/141414/666?text=Sketch+Process"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/600x400/141414/666?text=Prototype+V1"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/600x400/141414/666?text=UI+Flow"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
