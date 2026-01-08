@@ -388,6 +388,9 @@
             padding: 3rem;
             border: 1px solid var(--border);
             margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
         }
         .cs-stat-number {
             font-size: 4rem;
