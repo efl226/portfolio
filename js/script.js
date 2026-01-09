@@ -55,7 +55,7 @@
                             </p>
                         </div>
                         <div>
-                            <div class="cs-stat-box" style="margin-top: 2rem;">
+                            <div class="cs-stat-box" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
                                 <div>
                                     <div class="cs-stat-number">9</div>
                                     <span class="cs-stat-label">METADATA DIMENSIONS</span>
@@ -84,20 +84,26 @@
                             <div class="code-snippet">
                                 <span class="fn">HTTP_Request</span> (SharePoint Search API) {<br>
                                 &nbsp;&nbsp;method: "POST",<br>
-                                &nbsp;&nbsp;body: { querytext: <span class="hl">"user_input"</span>, rowlimit: 5000 }<br>
+                                &nbsp;&nbsp;body: { querytext: <span class="hl">"user_input"</span>, rowlimit: 50 }<br>
                                 } -> <span class="hl">Parse_JSON</span> -> <span class="fn">Return_Collection</span>
+                                <img 
+                                    src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/Screenshot%202025-08-07%20131821.png" 
+                                    style="display: block; margin: 2rem auto 0 auto; width: 40%; border: 1px solid var(--border);" 
+                                    alt="Backend Architecture Diagram"
+                                >
                             </div>
-                            <img 
-                                src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/Screenshot%202025-08-07%20131821.png" 
-                                style="display: block; margin: 2rem auto 0 auto; width: 40%; border: 1px solid var(--border);" 
-                                alt="Backend Architecture Diagram"
-                            >
+                            
                         </div>
                         <div>
                             <h4 style="color: white; margin-bottom: 1rem; text-transform: uppercase;">Learning the Ecosystem</h4>
                             <p style="color: #aaa; margin-bottom: 2rem;">
                                 Coming into a Microsoft-centric environment, I had to master the Power Platform ecosystem from scratch. I built a pipeline using <strong>Power Automate</strong> to communicate directly with the SharePoint Search API via custom HTTP requests, effectively bypassing standard limitations and unlocking the ability to query tens of thousands of documents instantly.
                             </p>
+                            <!-- NEW SVG LOGOS SECTION -->
+                            <div style="display: flex; justify-content: center; gap: 2rem; align-items: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/PowerApps_scalable.svg" style="height: 100%; width: auto; opacity: 0.9;" alt="Power Apps">
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/PowerAutomate_scalable.svg" style="height: 100%; width: auto; opacity: 0.9;" alt="Power Automate">
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -108,21 +114,25 @@
                     
                     <div class="cs-grid-2" style="margin-bottom: 4rem;">
                         <div>
-                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">One Screen, Six Contexts</h4>
+                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">The Heart of the Challenge: Unified Search</h4>
+                            <p style="color: #aaa; margin-bottom: 1.5rem;">
+                                <strong>The Problem:</strong> How do you instantly pinpoint a single document across an entire US organization without overwhelming the user?
+                            </p>
                             <p style="color: #aaa;">
-                                I mapped user journeys for distinct roles—from new hires needing "Learn & Prepare" materials to PMs needing specific reports. 
-                                <br><br>
-                                Instead of building static pages, I engineered a <strong>Single Dynamic Screen</strong> architecture. The app detects the user's intent (e.g., "Pitching") and reconfigures the entire UI, pre-filtering the content hub and adjusting the layout automatically.
+                                Users shouldn't fight the filter bar. I designed a "Unified Search" engine that masks extreme complexity behind a simple UI. It combines deep-content keyword logic (looking <em>inside</em> files) with 9 distinct metadata tags. A single "Search" action aggregates all these criteria into one payload, dispatching it to the backend. It was essential to design something that didn't just list files, but quickly highlighted relevant info, allowing employees to assess value in milliseconds.
                             </p>
                         </div>
                         <div>
-                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">Unified Search Engine</h4>
+                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">One Screen, Six Contexts</h4>
+                            <p style="color: #aaa; margin-bottom: 1.5rem;">
+                                Through user research, I discovered that daily work across the entire organization fell into six distinct "buckets," with most employees operating primarily within just one.
+                            </p>
                             <p style="color: #aaa;">
-                                Users shouldn't fight the filter bar. I built a unified search experience that combines keyword logic (looking inside documents) with the 9 metadata tags. A single "Search" action aggregates all criteria and dispatches the payload to the backend flow.
+                                Instead of building static pages, I engineered a <strong>Single Dynamic Screen</strong> architecture that adapts to these intents. For example, a Client Officer selecting <em>"Prospect & Engage"</em> sees pre-filtered client acquisition data, while a Marketer in <em>"Amplify Fame"</em> gets instant access to brand templates. Each view not only filters the document library but also dynamically surfaces links to the specific external tools those roles use daily, drastically reducing context switching.
                             </p>
                         </div>
                     </div>
-
+                    <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">Key Features</h4>
                     <div class="cs-gallery-grid">
                         <div class="cs-gallery-item">
                             <span class="cs-gallery-caption">01 // Content Hub</span>
@@ -134,8 +144,13 @@
                             <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">The central nervous system of the app, capable of filtering 20k+ assets in under 2 seconds.</p>
                         </div>
                         <div class="cs-gallery-item">
-                            <span class="cs-gallery-caption">02 // Personalized Favorites</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Implemented a separate SharePoint list with item-level permissions, ensuring every user's "Saved" collection is secure and private.</p>
+                            <span class="cs-gallery-caption">02 // Dynamic Contexts</span>
+                            <img 
+                                src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/Screenshot%202025-08-07%20131440.png" 
+                                style="display: block; width: 100%; border: 1px solid var(--border);" 
+                                alt="Prepare & Learn Interface"
+                            >
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;"> The "Prospect & Engage" context dynamically surfaces client acquisition data and external tools tailored to each role.</p>
                         </div>
                         <div class="cs-gallery-item">
                             <span class="cs-gallery-caption">03 // Hit Highlighting</span>
@@ -147,8 +162,12 @@
                             <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">To speed up relevance assessment, the search results display text snippets with the user's keywords <strong>bolded</strong> dynamically.</p>
                         </div>
                         <div class="cs-gallery-item">
-                            <span class="cs-gallery-caption">04 // Design System</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Adapted the corporate palette into a vibrant, accessible UI scheme that felt modern while staying brand-compliant.</p>
+                            <span class="cs-gallery-caption">04 // Personalized Favorites</span>
+                            <img 
+                                src="https://raw.githubusercontent.com/efl226/portfolio/main/images/ipsos/Screenshot%202025-08-07%20131559.png"                                 style="display: block; width: 100%; border: 1px solid var(--border);" 
+                                alt="Ipsos Favorites Hub Interface"
+                            >
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Implemented a separate SharePoint list with item-level permissions, ensuring every user's "Saved" collection is secure and private.</p>
                         </div>
                     </div>
                 </section>
@@ -182,7 +201,7 @@
                                     "Ethan was a summer intern for me and was a whiz at product management. He built something entirely new from scratch, was remarkable at understanding the requirements, even when they were not always clear, and demonstrated an insane capacity to learn whatever he needed to keep the project on track. He's graduating in May, snap him up!"
                                 </p>
                                 <div>
-                                    <strong style="display: block; color: var(--accent); font-family: monospace; letter-spacing: 1px; margin-bottom: 0.2rem;">ANNE HUNTER</strong>
+                                    <strong style="display: block; color: var(--accent); font-family: monospace; letter-spacing: 1px; margin-bottom: 0.2rem;"> - ANNE HUNTER</strong>
                                     <span style="display: block; font-size: 0.75rem; color: #888; text-transform: uppercase;">Senior Vice President, B2B Products and Go-to-Market, North America</span>
                                 </div>
                             </div>
@@ -200,11 +219,83 @@
             `,
             sway: `
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
-                <header class="cs-hero reveal"><h1 class="cs-title">Sway:<br>Zero-to-One Event Ecosystem</h1><div class="cs-meta-grid"><div><span>Role</span>Product Manager & Lead Designer</div><div><span>Tech</span>Figma, Bubble.io, Airtable, Stripe</div><div><span>Timeline</span>1 Month (MVP)</div><div><span>Type</span>Startup / FinTech</div></div></header>
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal">
-                <section class="cs-section reveal"><div class="cs-grid-2"><div><span class="cs-label">The Startup Hustle</span><h2 class="cs-big-text">Intern to Lead PM</h2></div><div><p class="large-p">I joined Sway as a UX Intern, but quickly earned the CEO's trust to lead the product. My mission was to architect a seamless event management ecosystem from scratch.</p><div style="margin-top: 3rem; border-left: 2px solid var(--accent); padding-left: 2rem;"><h4 style="color:white; margin-bottom: 1rem;">THE SPRINT STRATEGY</h4><p style="color: #aaa;">I structured the roadmap into <strong>three 2-week sprints</strong>, managing a team of three developers to hit an aggressive MVP deadline.</p></div></div></div></section>
-                <section class="cs-section reveal"><span class="cs-label">Feature Deep Dive</span><h2 class="cs-big-text">FinTech Trust & Complex IA</h2><p style="color: #aaa; max-width: 600px; margin-bottom: 4rem;">Designing for transparency in high-value transactions and simplifying complex financial data.</p><div class="cs-gallery-grid"><div class="cs-gallery-item"><img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details%20actual.png"><span class="cs-gallery-caption">01 // Payment Transparency</span></div><div class="cs-gallery-item"><img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Spaces%20Page.jpg"><span class="cs-gallery-caption">02 // Booking Overview</span></div><div class="cs-gallery-item"><img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details.jpg"><span class="cs-gallery-caption">03 // Budget Builder</span></div><div class="cs-gallery-item"><img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/budget%20builder%202.jpg"><span class="cs-gallery-caption">04 // Agenda Builder</span></div></div></section>
-                <section class="cs-section reveal"><div class="cs-grid-2"><div class="cs-tech-diagram"><h4 style="color: white; margin-bottom: 1rem;">// LOW-CODE / HIGH-LOGIC</h4><p>Architected a bridge between Figma designs and a functional Bubble.io frontend, powered by robust Airtable & Stripe pipelines.</p><div class="code-snippet"><span class="fn">stripe.webhook</span> -> <span class="hl">Airtable Automation</span><br><span class="fn">IF</span> status == 'succeeded':<br>&nbsp;&nbsp;<span class="hl">Bubble_DB</span>.update(booking_status)<br>&nbsp;&nbsp;<span class="hl">User_UI</span>.trigger(confetti_animation)</div></div><div><span class="cs-label">Reflections</span><h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Transparency is Key</h3><p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">Leading this project taught me that in FinTech, clarity isn't just aesthetic—it's functional. By prioritizing "Payment Transparency" and flexible "Management Suites," we reduced user anxiety and increased conversion.</p></div></div></section>
+                
+                <header class="cs-hero reveal">
+                    <h1 class="cs-title">Sway:<br>Zero-to-One Event Ecosystem</h1>
+                    <div class="cs-meta-grid">
+                        <div><span>Role</span>Product Manager & Lead Designer</div>
+                        <div><span>Tech</span>Figma, Bubble.io, Airtable, Stripe</div>
+                        <div><span>Timeline</span>1 Month (MVP)</div>
+                        <div><span>Type</span>Startup / FinTech</div>
+                    </div>
+                </header>
+
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal" alt="Sway Platform Overview">
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">The Startup Hustle</span>
+                            <h2 class="cs-big-text">Intern to Lead PM</h2>
+                        </div>
+                        <div>
+                            <p class="large-p">I joined Sway as a UX Intern, but quickly earned the CEO's trust to lead the product. My mission was to architect a seamless event management ecosystem from scratch.</p>
+                            <div style="margin-top: 3rem; border-left: 2px solid var(--accent); padding-left: 2rem;">
+                                <h4 style="color:white; margin-bottom: 1rem;">THE SPRINT STRATEGY</h4>
+                                <p style="color: #aaa;">I structured the roadmap into <strong>three 2-week sprints</strong>, managing a team of three developers to hit an aggressive MVP deadline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">Feature Deep Dive</span>
+                    <h2 class="cs-big-text">FinTech Trust & Complex IA</h2>
+                    <p style="color: #aaa; max-width: 600px; margin-bottom: 4rem;">Designing for transparency in high-value transactions and simplifying complex financial data.</p>
+                    
+                    <div class="cs-gallery-grid">
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details%20actual.png" alt="Payment Confirmation UI">
+                            <span class="cs-gallery-caption">01 // Payment Transparency</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Designed visual hierarchy to confirm transaction details instantly, building user trust during high-value checkouts.</p>
+                        </div>
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Spaces%20Page.jpg" alt="Booking Overview UI">
+                            <span class="cs-gallery-caption">02 // Booking Overview</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">A centralized dashboard allowing users to track venue status and manage itineraries in real-time.</p>
+                        </div>
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details.jpg" alt="Budget Builder Tool">
+                            <span class="cs-gallery-caption">03 // Budget Builder</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">UX Challenge: Making dense financial data 'drag-and-drop' simple for non-technical users to allocate funds.</p>
+                        </div>
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/budget%20builder%202.jpg" alt="Agenda Builder Tool">
+                            <span class="cs-gallery-caption">04 // Agenda Builder</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Complex scheduling made intuitive with a flexible block-based interface for dynamic timeline management.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div class="cs-tech-diagram">
+                            <h4 style="color: white; margin-bottom: 1rem;">// LOW-CODE / HIGH-LOGIC</h4>
+                            <p>Architected a bridge between Figma designs and a functional Bubble.io frontend, powered by robust Airtable & Stripe pipelines.</p>
+                            <div class="code-snippet">
+                                <span class="fn">stripe.webhook</span> -> <span class="hl">Airtable Automation</span><br>
+                                <span class="fn">IF</span> status == 'succeeded':<br>
+                                &nbsp;&nbsp;<span class="hl">Bubble_DB</span>.update(booking_status)<br>
+                                &nbsp;&nbsp;<span class="hl">User_UI</span>.trigger(confetti_animation)
+                            </div>
+                        </div>
+                        <div>
+                            <span class="cs-label">Reflections</span>
+                            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Transparency is Key</h3>
+                            <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">Leading this project taught me that in FinTech, clarity isn't just aesthetic—it's functional. By prioritizing "Payment Transparency" and flexible "Management Suites," we reduced user anxiety and increased conversion.</p>
+                        </div>
+                    </div>
+                </section>
             `,
             bardive: `
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
