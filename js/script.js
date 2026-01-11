@@ -6,10 +6,10 @@
         });
 
         document.addEventListener('mouseover', (e) => {
-            if (e.target.closest('a, .project-card, button, .skill-tag')) cursor.style.transform = 'scale(3)';
+            if (e.target.closest('a, .project-card, button, .skill-tag, .gallery-thumb')) cursor.style.transform = 'scale(3)';
         });
         document.addEventListener('mouseout', (e) => {
-            if (e.target.closest('a, .project-card, button, .skill-tag')) cursor.style.transform = 'scale(1)';
+            if (e.target.closest('a, .project-card, button, .skill-tag, .gallery-thumb')) cursor.style.transform = 'scale(1)';
         });
 
         // --- PROJECT CONTENT DATABASE ---
@@ -180,14 +180,54 @@
                             <p style="color: #aaa; margin-bottom: 2rem;">
                                 Towards the end of the internship, I architected the "Future State" of the hub: an AI companion powered by <strong>Google Vertex AI</strong>.
                             </p>
+                            <p style="color: #aaa; margin-bottom: 2rem;">
+                                The challenge was ingestion. I built a custom pipeline using <strong>Python</strong> and <strong>Power Automate</strong> to not only upload documents to a Google Cloud Storage bucket but to simultaneously generate a corresponding JSON manifest for each file. This ensured every document was indexed with the correct metadata schema required by Vertex AI.
+                            </p>
                             <p style="color: #aaa;">
-                                I built a pipeline to export documents and metadata to a Google Cloud Storage bucket, where Vertex AI indexed the actual content. The app then queries this index to answer natural language questions, bridging the gap between static files and active knowledge.
+                                This architecture allowed the AI to read through thousands of permitted (public-only) documents and their associated tags, delivering a search experience that understood context, not just keywords.
                             </p>
                         </div>
+                        
+                        <!-- UPDATED PIPELINE DIAGRAM WITH SVG IMAGES -->
                         <div style="background: var(--surface); padding: 2rem; border-left: 2px solid var(--accent);">
-                            <strong style="color: white; display: block; margin-bottom: 0.5rem;">Intelligent Indexing Visual</strong>
-                            <p style="font-size: 0.9rem; color: #888; margin-bottom: 2rem;">The interface bridging Power Apps and the Vertex AI vector database.</p>
+                            <strong style="color: white; display: block; margin-bottom: 2rem;">Pipeline Architecture</strong>
                             
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
+                                <div style="text-align: center;">
+                                    <div style="width: 50px; height: 50px; background: #222; border: 1px solid #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
+                                        <!-- Placeholder SVG 1 -->
+                                        <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/documents-svgrepo-com.svg" style="width: 20px; height: 20px;" alt="Docs">
+                                    </div>
+                                    <span style="font-size: 0.6rem; color: #888; font-family: monospace;">DOCS</span>
+                                </div>
+                                
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/right-arrow-svgrepo-com.svg" style="width: 24px; height: 24px; opacity: 0.5;" alt="arrow">
+                                
+                                <div style="text-align: center;">
+                                    <div style="width: 50px; height: 50px; background: #222; border: 1px solid var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;"><span style="color: var(--accent); font-weight: bold; font-size: 0.8rem;">PY</span></div>
+                                    <span style="font-size: 0.6rem; color: #888; font-family: monospace;">SCRIPT</span>
+                                </div>
+                                
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/right-arrow-svgrepo-com.svg" style="width: 24px; height: 24px; opacity: 0.5;" alt="arrow">
+                                
+                                <div style="text-align: center;">
+                                    <div style="width: 50px; height: 50px; background: #222; border: 1px solid #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
+                                        <!-- Placeholder SVG 3 -->
+                                        <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/json-svgrepo-com.svg" style="width: 20px; height: 20px;" alt="JSON">
+                                    </div>
+                                    <span style="font-size: 0.6rem; color: #888; font-family: monospace;">Structured Data</span>
+                                </div>
+                                
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/right-arrow-svgrepo-com.svg" style="width: 24px; height: 24px; opacity: 0.5;" alt="arrow">
+                                
+                                <div style="text-align: center;">
+                                    <div style="width: 50px; height: 50px; background: #222; border: 1px solid #444; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem auto;">
+                                        <!-- Placeholder SVG 4 -->
+                                        <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/ai-svgrepo-com.svg" style="width: 20px; height: 20px;" alt="Vertex AI">
+                                    </div>
+                                    <span style="font-size: 0.6rem; color: #888; font-family: monospace;">VERTEX AI</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -221,11 +261,11 @@
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
                 
                 <header class="cs-hero reveal">
-                    <h1 class="cs-title">Sway:<br>Zero-to-One Event Ecosystem</h1>
+                    <h1 class="cs-title">Sway:<br>Zero-to-One Event Management Software</h1>
                     <div class="cs-meta-grid">
-                        <div><span>Role</span>Product Manager & Lead Designer</div>
+                        <div><span>Role</span>Product Development and Management Intern</div>
                         <div><span>Tech</span>Figma, Bubble.io, Airtable, Stripe</div>
-                        <div><span>Timeline</span>1 Month (MVP)</div>
+                        <div><span>Timeline</span>2-3 Months (MVP)</div>
                         <div><span>Type</span>Startup / FinTech</div>
                     </div>
                 </header>
@@ -236,43 +276,84 @@
                     <div class="cs-grid-2">
                         <div>
                             <span class="cs-label">The Startup Hustle</span>
-                            <h2 class="cs-big-text">Intern to Lead PM</h2>
+                            <h2 class="cs-big-text">Intern to PM</h2>
+                            <p class="large-p" style="margin-top: 2rem;">Sway is an event management startup based in San Francisco, CA, that's goal is to allow users to use Sway to book and manage events all in one seamless experience, pairing venues with vendors and managing contracts, budgeting, invitations, and more. working with a team of three developers, I played a pivotal role in the development of Sway's MVP.</p>
+
                         </div>
                         <div>
-                            <p class="large-p">I joined Sway as a UX Intern, but quickly earned the CEO's trust to lead the product. My mission was to architect a seamless event management ecosystem from scratch.</p>
                             <div style="margin-top: 3rem; border-left: 2px solid var(--accent); padding-left: 2rem;">
-                                <h4 style="color:white; margin-bottom: 1rem;">THE SPRINT STRATEGY</h4>
-                                <p style="color: #aaa;">I structured the roadmap into <strong>three 2-week sprints</strong>, managing a team of three developers to hit an aggressive MVP deadline.</p>
+                                <h4 style="color:white; margin-bottom: 1rem;">MY CONTRIBUTIONS</h4>
+                                <p style="color: #aaa;">
+                                    Initially, I was focused on product development and UX design for the application.My main contributions included: development and design of the payment flow and shopping cart, prototyping an event management dashboard, and developing the blog page with optimized SEO.
+                                </p>
+                                <p style="color: #aaa; margin-top: 1rem;">
+                                    After a few weeks, I was able to quickly gain the trust of the CEO. The CEO recognized my strong understanding of the direction we wanted to take the product and assigned me an additional role in product management. In this role, I developed and administered a product roadmap organized into three two-week sprints to ultimately release our MVP by the end of my internship, tasking myself and the two other developers to implement key features.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section class="cs-section reveal">
+                    <span class="cs-label">FinTech Logic</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 3rem;">Transparent Payment Flow</h2>
+                    
+                    <div class="cs-grid-2">
+                        <div style="grid-column: span 2;">
+                            <p style="color: #aaa; max-width: 800px; margin-bottom: 3rem;">
+                                The core business model relied on a complex transaction flow: charge a deposit to secure interest, confirm the booking manually with the venue, and <em>then</em> charge the full amount. This required a delicate UX balance—users needed to feel secure authorizing a large payment that wouldn't happen immediately.
+                            </p>
+                        </div>
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/checkoutsummarypage.png" alt="Deposit UI">
+                            <span class="cs-gallery-caption">Step 1: The Deposit</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Clear micro-copy explaining the "Hold vs. Charge" mechanic to reduce abandonment.</p>
+                        </div>
+                        <div class="cs-gallery-item">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/firstpaymentpage.png" alt="Confirmation UI">
+                            <span class="cs-gallery-caption">Step 2: Confirmation</span>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">The "booking confirmed" state that triggers the final Stripe capture via webhooks.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
                     <span class="cs-label">Feature Deep Dive</span>
-                    <h2 class="cs-big-text">FinTech Trust & Complex IA</h2>
+                    <h2 class="cs-big-text">Event Management Suite</h2>
                     <p style="color: #aaa; max-width: 600px; margin-bottom: 4rem;">Designing for transparency in high-value transactions and simplifying complex financial data.</p>
                     
                     <div class="cs-gallery-grid">
                         <div class="cs-gallery-item">
                             <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details%20actual.png" alt="Payment Confirmation UI">
                             <span class="cs-gallery-caption">01 // Payment Transparency</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Designed visual hierarchy to confirm transaction details instantly, building user trust during high-value checkouts.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">
+                               The Booking Overview page gives users a high-level snapshot of their event, including venue details, experiences, payment status (pending or paid), 
+                               and a suggested agenda. A key focus was determining the most essential information for a quick event overview and designing a layout that presents it clearly and intuitively.
+                            </p>
                         </div>
                         <div class="cs-gallery-item">
                             <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Spaces%20Page.jpg" alt="Booking Overview UI">
                             <span class="cs-gallery-caption">02 // Booking Overview</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">A centralized dashboard allowing users to track venue status and manage itineraries in real-time.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">
+                                This interactive prototype streamlines venue management after an event is booked, providing users with a clear and intuitive way to oversee their space. 
+                                The dashboard offers quick access to essential venue details, along with tools for organizing and managing related files and documents.
+                            </p>
                         </div>
                         <div class="cs-gallery-item">
                             <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/Booking%20Details.jpg" alt="Budget Builder Tool">
                             <span class="cs-gallery-caption">03 // Budget Builder</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">UX Challenge: Making dense financial data 'drag-and-drop' simple for non-technical users to allocate funds.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">
+                                The Agenda Builder feature helps users seamlessly plan event schedules. This interactive tool allows users to create multiple agendas, organize major and sub-events, and easily rearrange elements using drag-and-drop functionality. 
+                                A well-structured visual hierarchy ensures an intuitive experience, guiding users through the process of building clear and effective event agendas.
+                            </p>
                         </div>
                         <div class="cs-gallery-item">
                             <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/sway/budget%20builder%202.jpg" alt="Agenda Builder Tool">
                             <span class="cs-gallery-caption">04 // Agenda Builder</span>
-                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Complex scheduling made intuitive with a flexible block-based interface for dynamic timeline management.</p>
+                            <p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">
+                                Budget Builder is a dynamic, customizable dashboard that empowers users to organize and tailor their budgets with ease. Users can add and rearrange budget items, each displaying key financial details such as total actual cost, expected cost, and its percentage of the overall budget. Each item also includes a detailed cost breakdown for deeper insight. 
+                                At the top, a color-coded visual indicator dynamically reflects the overall budget in relation to the planned total, providing users with a clear and intuitive overview of their financial planning.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -299,16 +380,177 @@
             `,
             bardive: `
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
-                <header class="cs-hero reveal"><h1 class="cs-title">BarDive:<br>Social Transparency for Nightlife</h1><div class="cs-meta-grid"><div><span>Role</span>Co-Founder & Lead Designer</div><div><span>Tech</span>React Native, Firebase, Google Maps API</div><div><span>Status</span>Seed Funded ($1K)</div><div><span>Year</span>2023</div></div></header>
-                <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal">
-                <section class="cs-section reveal"><div class="cs-grid-2"><div><span class="cs-label">The Mission</span><h2 class="cs-big-text">Revitalizing Local Nightlife</h2><p class="large-p" style="margin-top: 2rem;">Addressing the "FOMO" problem space by providing real-time transparency into bar occupancy and social vibes.</p></div><div><div style="background: var(--surface); padding: 2rem; border-left: 2px solid var(--accent); margin-bottom: 2rem;"><strong style="color: white; display: block; margin-bottom: 0.5rem;">User Research Strategy</strong><p style="font-size: 0.9rem; color: #888;">We interviewed <strong>200+ college students</strong> and <strong>8 bar owners</strong>. The insight? Students fear missing out but also fear empty bars. Bar owners wanted a way to broadcast "hype" without expensive ads.</p></div><div class="cs-stat-box"><div class="cs-stat-number">200+</div><span class="cs-stat-label">USER INTERVIEWS CONDUCTED</span></div></div></div></section>
-                <section class="cs-section reveal"><span class="cs-label">Competitive Differentiation</span><h2 class="cs-big-text">Contextual Privacy vs. The Giants</h2><div class="cs-grid-2"><div><p style="color: #aaa; margin-bottom: 2rem;">Apps like Snap Maps track you everywhere. Apps like BarGlance are often outdated. BarDive solves this through <strong>Contextual Privacy</strong>: location sharing only activates when you check in at a registered partner bar.</p><table class="comparison-table"><thead><tr><th>Feature</th><th>Snap Maps</th><th>BarDive</th></tr></thead><tbody><tr><td>Location Tracking</td><td>Always On (Creepy)</td><td>Only at Partner Bars</td></tr><tr><td>Social Focus</td><td>Broad / Friends</td><td>Nightlife / Events</td></tr><tr><td>Data Privacy</td><td>Low</td><td>High (Self-Expiring)</td></tr></tbody></table></div><div class="cs-tech-diagram"><h4 style="color: white; margin-bottom: 1rem;">// THE BIO-PIC MAP</h4><p>The map logic prioritizes "Visual Density" over precise tracking. Clusters of user profile pictures indicate occupancy.</p><img 
-                                    src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/Zoomed%20In(mollys).png" 
-                                    style="display: block; margin: 2rem auto 0 auto; width: 40%; border: 1px solid var(--border);" 
-                                    alt="Intelligent Indexing Logic"
-                                ></div></div></section>
-                <section class="cs-section reveal"><span class="cs-label">Safety-First Design</span><h2 class="cs-big-text" style="margin-bottom: 3rem;">Designing for a Safe Night Out</h2><div class="cs-grid-2"><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=Safe+Night+Out+Resources"><span class="cs-gallery-caption">Self-Expiring Location</span><p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Locations automatically vanish after 4 hours or upon checkout.</p></div><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=Resource+Hub+UI"><span class="cs-gallery-caption">Resource Hub</span><p style="font-size: 0.8rem; color: #888; margin-top: 0.5rem;">Integrated one-tap access to campus safety, Uber/Lyft, and emergency contacts.</p></div></div></section>
-                <section class="cs-section reveal"><div class="cs-grid-2"><div><span class="cs-label">Pitch & Validation</span><h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">From Figma to Funding</h3><p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">Our user-centric approach won the <strong>Eureka Pitch Night</strong>, securing $1,000 in seed funding to move from high-fidelity Figma prototypes to a functional React Native MVP.</p></div><div><span class="cs-label">Founder's Reflection</span><div style="background: #111; padding: 2rem; border: 1px dashed var(--border);"><p style="color: #ccc; font-style: italic;">"The biggest challenge wasn't the code—it was the balance. Wearing the hats of both Lead Designer and Front-End Engineer taught me that the best code is often the code you <strong>don't</strong> write."</p></div></div></div></section>
+                
+                <header class="cs-hero reveal">
+                    <h1 class="cs-title">BarDive:<br>Social Transparency for Nightlife</h1>
+                    <div class="cs-meta-grid">
+                        <div><span>Role</span>Co-Founder & Lead Designer</div>
+                        <div><span>Tech</span>React Native, Firebase, Google Maps API</div>
+                        <div><span>Status</span>Seed Funded ($1K)</div>
+                        <div><span>Year</span>2023</div>
+                    </div>
+                </header>
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">Project Overview</span>
+                            <h2 class="cs-big-text">The Nightlife Network</h2>
+                            <p class="large-p" style="margin-top: 2rem;">
+                                Established in October 2024, my Co-Founder and I created BarDive, a mobile app that provides real-time insights into local bars, enabling college students to connect and engage with their social scene and community.
+                            </p>
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/BarDive%20Logo%20SVG.svg" 
+                                style="width: 250px; height: auto; object-fit: cover; margin-top: 2rem;" 
+                                alt="BarDive App Home Screen Mockup">
+                        </div>
+                        <div style="border-left: 2px solid var(--accent); padding-left: 2rem; margin-top: 6rem;">
+                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1.5rem;">My Contributions</h4>
+                            <p style="color: #aaa; margin-bottom: 1.5rem;">As a co-founder, my impact extends to all facets of the company. My main contributions include:</p>
+                            <ul style="list-style: none; color: #b7ff00; line-height: 1.6; font-size: 1.5rem; font-weight: 700; display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                                <li>1. Product Design</li>
+                                <li>2. Pitching to Investors</li>
+                                <li>3. Business Development</li>
+                                <li>4. Brand Creation and Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">The Problem</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 4rem;">The Disconnected Night Out</h2>
+                    
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <!-- Problem 1: Image -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/iphone-style-smartphone-material-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Decision Paralysis</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Bar-goers need multiple apps (Maps, Insta, Chats) in the decision-making process for a simple night out.</p>
+                        </div>
+
+                        <!-- Problem 2: FOMO -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/user-multiple-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">F.O.M.O.</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Amplified by social media, often people are more concerned about missing out on an experience rather than the experience itself.</p>
+                        </div>
+
+                        <!-- Problem 3: Decline -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/trending-down-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Declining Attendance</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Bars are experiencing a noticeable decrease in attendance from Gen Z, who prioritize unique and personalized experiences.</p>
+                        </div>
+
+                        <!-- Problem 4: Marketing -->
+                        <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/marketing-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: white; margin-bottom: 0.5rem;">Ineffective Marketing</h4>
+                            <p style="color: #888; font-size: 0.9rem;">Many bars lack the tools to effectively reach their target audience, relying on outdated methods that fail to engage younger demographics.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">The Solution</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 4rem;">Social Transparency</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem;">
+                        <!-- Col 1 -->
+                        <div>
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/map-pin-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent); text-transform: uppercase; margin-bottom: 1rem;">Location Sharing</h4>
+                            <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
+                                BarDive only shares your location at registered bars, ensuring greater privacy. Your location is visible only to friends on the app, while non-friends appear as part of the total attendee count. This creates a more exclusive and secure experience.
+                            </p>
+                        </div>
+                        <!-- Col 2 -->
+                        <div>
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/market-shop-shopping-ecommerce-cart-buy-online-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent); text-transform: uppercase; margin-bottom: 1rem;">Promoting Local Biz</h4>
+                            <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
+                                So far, we’ve partnered with <strong style="color: white; background: rgba(183, 255, 0, 0.1); padding: 0 4px;">eight bars</strong> in the Bethlehem, PA area. They register events and deals in exchange for promotion. We are also organizing a BarDive-themed bar crawl for next semester.
+                            </p>
+                        </div>
+                        <!-- Col 3 -->
+                        <div>
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/svgs/safe-shield-protection-svgrepo-com.svg" style="width: 50px; height: 50px; object-fit: cover; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent); text-transform: uppercase; margin-bottom: 1rem;">Safe Nights Out</h4>
+                            <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">
+                                Safety is a top priority. Features allow users to limit visibility to specific friends and auto-stop sharing at night. We also include a resource hub for handling overconsumption and emergency contacts.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">Key Features</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 4rem;">The Experience</h2>
+                    
+                    <div class="cs-grid-2">
+                        <!-- Feature 1 -->
+                        <div>
+                            <div style="background: #111; border: 1px solid var(--border); padding: 2rem; display: flex; justify-content: center; margin-bottom: 2rem;">
+                                <!-- Vertical Placeholder -->
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/Zoomed%20In(mollys).png" style="height: 50vh; width: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                            <h3 style="color: white; margin-bottom: 0.5rem;">The Bio-Pic Map</h3>
+                            <p style="color: #888;">See "Who's There" instantly. The map prioritizes visual density using profile pictures, creating a heat map of social activity rather than just dry data points.</p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div>
+                            <div style="background: #111; border: 1px solid var(--border); padding: 2rem; display: flex; justify-content: center; margin-bottom: 2rem;">
+                                <!-- Vertical Placeholder -->
+                                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/Who's%20Going%20Out%20Tab.png" style="height: 50vh; width: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                            <h3 style="color: white; margin-bottom: 0.5rem;">Who's Going Out Tab</h3>
+                            <p style="color: #888;">Before the night starts, users will get a push notification asking them where they are going that night. This feature will help users plan ahead so they do not have to wait for the bars will fill up. </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">Design System</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 2rem;">From Wireframe to Code</h2>
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem;"> 
+                        <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/wireframes.png" style="width: 75%; height: auto;" alt="Figma Design System">
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">Pitch & Validation</span>
+                            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Eureka Pitch Night</h3>
+                            
+                            <!-- Video Player -->
+                            <div style="margin-bottom: 2rem; border: 1px solid var(--border);">
+                                <video 
+                                    controls 
+                                    width="100%" 
+                                    style="aspect-ratio: 16/9; display: block; background: #000;"
+                                    poster="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/BarDive%20Logo%20SVG.svg"
+                                >
+                                    <source src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/BarDive%20Eureka%20Pitch%20Night.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            
+                            <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">
+                                We pitched BarDive to the university board and investors, highlighting our user-centric approach and verified market need.
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <div style="background: var(--surface); border: 1px solid var(--border); padding: 3rem; text-align: center;">
+                                <h4 style="color: #888; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Validation</h4>
+                                <div style="font-size: 4rem; font-weight: 900; color: var(--accent); line-height: 1;">$1,000</div>
+                                <span style="display: block; color: white; margin-top: 1rem; font-weight: 700;">SEED FUNDING SECURED</span>
+                                <p style="color: #666; margin-top: 1rem; font-size: 0.9rem;">Awarded "Best Pitch" at Eureka Night</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             `,
             resonant: `
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
@@ -316,30 +558,116 @@
                 <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal">
                 <section class="cs-section reveal"><div class="cs-grid-2"><div><span class="cs-label">The Challenge</span><h2 class="cs-big-text">The Crisis of Connection</h2><p class="large-p" style="margin-top: 2rem;">Platforms like Spotify treat music as disposable utility—"background noise" optimized for retention rather than engagement.</p></div><div><div style="background: var(--surface); padding: 2rem; border-left: 2px solid var(--accent); margin-bottom: 2rem;"><strong style="color: white; display: block; margin-bottom: 0.5rem;">The Solution: Latent Space Navigation</strong><p style="font-size: 0.9rem; color: #888;">ResonantDesign re-imagines the music library not as a list, but as a <strong>living neural network</strong>.</p></div></div></div></section>
                 <section class="cs-section reveal"><span class="cs-label">Technical Highlight</span><h2 class="cs-big-text">The Python Intelligence Pipeline</h2><div class="cs-grid-2"><div><p style="color: #aaa; margin-bottom: 2rem;">The core of the system is a custom Python ETL pipeline that automates the "Intelligence." It fetches metadata from MusicBrainz, lyrics from Genius, and then uses <strong>NLP Vector Embeddings</strong> to mathematically calculate the relationship between every album in your library.</p><ul class="cs-impact-list" style="color: #ccc; font-size: 0.9rem;"><li><strong>Ingestion:</strong> Automated fetching via Last.fm & Genius APIs.</li><li><strong>Vectorization:</strong> Uses <code>sentence-transformers</code> to convert lyrics to high-dimensional vectors.</li><li><strong>Math:</strong> Calculates Cosine Similarity to generate the graph edges.</li></ul></div><div class="cs-tech-diagram"><h4 style="color: white; margin-bottom: 1rem;">// THE DNA SCHEMA</h4><p>Albums are broken down into four distinct dimensions for analysis.</p><div class="code-snippet"><span class="fn">class</span> <span class="hl">AlbumDNA</span>:<br>&nbsp;&nbsp;visual: ColorPalette<br>&nbsp;&nbsp;sonic: BPM_Energy_Vector<br>&nbsp;&nbsp;genetic: Credits_List<br>&nbsp;&nbsp;semantic: <span class="fn">Lyrical_Embedding(768)</span></div></div></div></section>
-                <section class="cs-section reveal"><span class="cs-label">Key Features</span><h2 class="cs-big-text" style="margin-bottom: 3rem;">UX Mechanics of the Archive</h2><div class="cs-gallery-grid"><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=The+Passport+UI"><span class="cs-gallery-caption">The Passport</span></div><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=Neural+Filters+UI"><span class="cs-gallery-caption">Neural Filters</span></div><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=Spotlight+Mode+UI"><span class="cs-gallery-caption">Spotlight Mode</span></div><div class="cs-gallery-item"><img src="https://via.placeholder.com/600x400/1a1a1a/555?text=Graph+View+UI"><span class="cs-gallery-caption">Force-Directed Graph</span></div></div></section>
+                <section class="cs-section reveal"><span class="cs-label">Key Features</span><h2 class="cs-big-text" style="margin-bottom: 3rem;">UX Mechanics of the Archive</h2><div class="cs-gallery-grid"><div class="cs-gallery-item">
+                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172114.png">
+                <span class="cs-gallery-caption">The Passport</span></div><div class="cs-gallery-item">
+                    <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20171956.png">
+                <span class="cs-gallery-caption">Neural Filters</span></div><div class="cs-gallery-item">
+                    <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172150.png">
+                <span class="cs-gallery-caption">Spotlight Mode</span></div><div class="cs-gallery-item">
+                    <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172203.png">
+                <span class="cs-gallery-caption">Force-Directed Graph</span></div></div></section>
             `
         };
+
+        // --- GALLERY DATA (UPDATED FOR MULTIPLE IMAGES) ---
+        const galleryData = [
+            { 
+                title: "Flatpack Furniture", 
+                desc: "A modular chair design from a single sheet of plywood.", 
+                images: [
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/chair/Final%20Chair%202%20smaller.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/chair/Final%20Chair%202.jpg",
+                ] 
+            },
+            { 
+                title: "Aroma Aid", 
+                desc: "UX Case Study: Designing an app for scent rehabilitation.", 
+                images: [
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/two%20phones.jpg",
+                ] 
+            },
+            { 
+                title: "HealthGaurd", 
+                desc: "UX Case Study: Health monitoring app for the future.", 
+                images: [
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/healthguard/Alex%203%20new.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/healthguard/ALex%204.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/healthguard/final%20health.png"
+
+                ] 
+            },
+            { 
+                title: "Surfacing Study", 
+                desc: "Analysis of surface textures in industrial design.", 
+                images: ["https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/surface/Img2586.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/surface/Img2587.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/surface/Img2589.jpg"
+                ] 
+            },
+            { 
+                title: "Mouse Concept", 
+                desc: "Mouse design inspired by the exterior of the Toyota 4Runner 2023", 
+                images: ["https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/mouse/Mouse%20Rending%20Front%20angle.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/mouse/front%20close.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/mouse/mouse%20up%20close.png"
+                ] 
+            },
+            { 
+                title: "3D Printed Shoe", 
+                desc: "Custom sneaker design utilizing 3D printing technology.", 
+                images: ["https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/shoe/foot%20no%20background%20.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/shoe/IMG_6698.jpeg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/shoe/IMG_6704.jpeg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/shoe/IMG_6713.jpeg"
+                ] 
+            },
+            { 
+                title: "Sketches", 
+                desc: "Various sketches in different mediums.", 
+                images: ["https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/sKETCHES.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/Hangover%20Hank.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/IMG_1162.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/IMG_1471.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/Parfum.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/sketches/ToothTutor.jpg"
+                ] 
+            },
+            { 
+                title: "Self Portrait", 
+                desc: "Project from 2D Design class.", 
+                images: ["https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/Self--portait%20FINAL.jpg"] 
+            }
+        ];
+
+        let currentProjectIndex = 0;
+        let currentImageIndex = 0;
 
         // --- NAVIGATION LOGIC ---
         function openProject(id) {
             const container = document.getElementById('project-view');
             const home = document.getElementById('home-view');
             const about = document.getElementById('about-view');
-            const nav = document.getElementById('main-nav');
+            const gallery = document.getElementById('gallery-view');
 
             container.innerHTML = projectPages[id] || projectPages['ipsos'];
             
             home.style.display = 'none';
             about.style.display = 'none';
+            gallery.style.display = 'none';
             container.style.display = 'block';
             
             window.scrollTo(0, 0);
             initObservers();
+            
+            // Re-run icons AFTER content injection
+            lucide.createIcons();
         }
 
         function showHome() {
             document.getElementById('project-view').style.display = 'none';
             document.getElementById('about-view').style.display = 'none';
+            document.getElementById('gallery-view').style.display = 'none';
             document.getElementById('home-view').style.display = 'block';
             window.scrollTo(0, 0);
             initObservers();
@@ -348,10 +676,129 @@
         function showAbout() {
             document.getElementById('home-view').style.display = 'none';
             document.getElementById('project-view').style.display = 'none';
+            document.getElementById('gallery-view').style.display = 'none';
             document.getElementById('about-view').style.display = 'block';
             window.scrollTo(0, 0);
             initObservers();
         }
+
+        function showGallery() {
+            document.getElementById('home-view').style.display = 'none';
+            document.getElementById('project-view').style.display = 'none';
+            document.getElementById('about-view').style.display = 'none';
+            
+            const galleryView = document.getElementById('gallery-view');
+            galleryView.style.display = 'block';
+            
+            // Render the gallery if empty
+            renderGallery();
+            
+            window.scrollTo(0, 0);
+        }
+
+        function renderGallery() {
+            const container = document.getElementById('gallery-container');
+            
+            // If already rendered, just re-trigger animations
+            if (container.children.length > 0) {
+                const items = container.children;
+                Array.from(items).forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 100 + (index * 50));
+                });
+                return;
+            }
+
+            galleryData.forEach((item, index) => {
+                const div = document.createElement('div');
+                // Removed 'reveal' class to decouple from global observer
+                div.className = 'gallery-thumb'; 
+                // Inline styles for the staggered animation logic
+                div.style.opacity = '0';
+                div.style.transform = 'translateY(20px)';
+                div.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                div.onclick = () => openLightbox(index);
+                // Use the first image as the thumbnail
+                div.innerHTML = `
+                    <img src="${item.images[0]}" alt="${item.title}">
+                    <div class="gallery-overlay-text">
+                        <span class="gallery-title-sm">${item.title}</span>
+                    </div>
+                `;
+                container.appendChild(div);
+                
+                // Staggered animation trigger
+                setTimeout(() => {
+                    div.style.opacity = '1';
+                    div.style.transform = 'translateY(0)';
+                }, 100 + (index * 50));
+            });
+        }
+
+        // --- LIGHTBOX LOGIC ---
+        function openLightbox(index) {
+            currentProjectIndex = index;
+            currentImageIndex = 0; // Start at the first image
+            updateLightboxContent();
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'flex';
+            // Slight delay for opacity transition
+            setTimeout(() => lightbox.classList.add('active'), 10);
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        function changeSlide(step) {
+            const project = galleryData[currentProjectIndex];
+            
+            // Cycle images within the current project
+            currentImageIndex += step;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = project.images.length - 1;
+            } else if (currentImageIndex >= project.images.length) {
+                currentImageIndex = 0;
+            }
+            
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = galleryData[currentProjectIndex];
+            const currentImgSrc = item.images[currentImageIndex];
+            
+            document.getElementById('lb-img').src = currentImgSrc;
+            document.getElementById('lb-title').innerText = item.title;
+            
+            // Add counter if there are multiple images
+            const counterText = item.images.length > 1 
+                ? ` <span style="font-size: 0.8rem; color: var(--accent);">(${currentImageIndex + 1}/${item.images.length})</span>` 
+                : "";
+                
+            document.getElementById('lb-desc').innerHTML = item.desc + counterText;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (document.getElementById('lightbox').style.display === 'flex') {
+                if (e.key === 'ArrowLeft') changeSlide(-1);
+                if (e.key === 'ArrowRight') changeSlide(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
 
         // --- ANIMATION OBSERVER ---
         const observer = new IntersectionObserver((entries) => {

@@ -7,6 +7,7 @@
     
     <!-- CSS Refs -->
     <link type="text/css" href="css/styles.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
    
@@ -18,9 +19,26 @@
         <div class="logo" onclick="showHome()">D.ENG</div>
         <div class="nav-links">
             <a onclick="showHome()">Archive</a>
+            <a onclick="showGallery()">Gallery</a>
             <a onclick="showAbout()">About</a>
         </div>
     </nav>
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()"><i data-lucide="x"></i></span>
+        <button class="nav-btn nav-prev" onclick="changeSlide(-1)"><i data-lucide="chevron-left"></i></button>
+        <div class="lightbox-content">
+            <div class="lightbox-img-container">
+                <img id="lb-img" src="" alt="">
+            </div>
+            <div class="lightbox-meta">
+                <h3 id="lb-title" class="lightbox-title">Title</h3>
+                <p id="lb-desc" class="lightbox-desc">Description goes here.</p>
+            </div>
+        </div>
+        <button class="nav-btn nav-next" onclick="changeSlide(1)"><i data-lucide="chevron-right"></i></button>
+    </div>
 
     <!-- HOME VIEW -->
     <div id="home-view">
@@ -40,7 +58,7 @@
                 <!-- Project 1: IPSOS -->
                 <div class="project-card reveal" onclick="openProject('ipsos')">
                     <div class="img-wrapper">
-                        <img src="https://www.usailighting.com/stuff/contentmgr/files/4/eff41788426238be72adec33178e2b5f/image/ipsos200park_pho_002_web_large.jpg?q=80&w=1600&auto=format&fit=crop" alt="Ipsos Hub">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Ipsos Hub">
                     </div>
                     <div class="project-meta">
                         <div>
@@ -54,7 +72,7 @@
                 <!-- Project 2: SWAY -->
                 <div class="project-card reveal" onclick="openProject('sway')">
                     <div class="img-wrapper">
-                        <img src="https://cdn.canvasrebel.com/wp-content/uploads/2023/07/c-AdamGoldstein__0U9A4569_1687733938624.jpg?q=80&w=1600&auto=format&fit=crop" alt="Sway Platform">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop" alt="Sway Platform">
                     </div>
                     <div class="project-meta">
                         <div>
@@ -100,6 +118,18 @@
         </footer>
     </div>
 
+    <!-- GALLERY VIEW -->
+    <div id="gallery-view">
+        <header class="cs-hero reveal">
+            <h1 class="cs-title">Visual Archive</h1>
+            <p style="color: var(--text-muted); margin-top: 1rem;">A collection of experiments, prototypes, and visual explorations.</p>
+        </header>
+        
+        <div class="gallery-grid-layout" id="gallery-container">
+            <!-- Gallery items injected via JS -->
+        </div>
+    </div>
+
     <!-- ABOUT VIEW -->
     <div id="about-view">
         
@@ -122,26 +152,55 @@
                 <div class="reveal">
                     <h3 class="cs-label" style="margin-bottom: 3rem;">Career So Far</h3>
                     <div class="timeline-item">
-                        <span class="timeline-year">2023 - PRESENT</span>
-                        <div class="timeline-role">Lead Technical Architect</div>
+                        <span class="timeline-year">May 2025 - December 2025</span>
+                        <div class="timeline-role">Growth Organization Intern</div>
                         <div class="timeline-company">Ipsos North America</div>
                     </div>
                     <div class="timeline-item">
-                        <span class="timeline-year">2022 - 2023</span>
+                        <span class="timeline-year">October 2024 - Present</span>
                         <div class="timeline-role">Co-Founder & Lead Designer</div>
-                        <div class="timeline-company">BarDive (Seed Funded)</div>
+                        <div class="timeline-company">BarDive</div>
                     </div>
                     <div class="timeline-item">
-                        <span class="timeline-year">2021 - 2022</span>
-                        <div class="timeline-role">Product Designer</div>
-                        <div class="timeline-company">Sway FinTech</div>
+                        <span class="timeline-year">October 2024 - May 2025</span>
+                        <div class="timeline-role">Team Lead</div>
+                        <div class="timeline-company">IBM Z Club, Lehigh University</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">May 2024 - August 2024</span>
+                        <div class="timeline-role">Product Management and Development Intern</div>
+                        <div class="timeline-company">Sway</div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">December 2023 - January 2024</span>
+                        <div class="timeline-role">Artificial Intelligence Operator Intern</div>
+                        <div class="timeline-company">Infinitus Systems Inc</div>
                     </div>
                 </div>
-                
+
                 <div class="reveal">
-                    <h3 class="cs-label" style="margin-bottom: 3rem;">Technical Arsenal</h3>
+                    <h3 class="cs-label" style="margin-bottom: 3rem;">Software</h3>
                     <div class="skills-container">
-                        <div class="skill-tag">React / Next.js</div>
+                        <div class="skill-tag">Figma</div>
+                        <div class="skill-tag">Adobe Photoshop</div>
+                        <div class="skill-tag">Adobe Illustrator</div>
+                        <div class="skill-tag">Adobe InDesign</div>
+                        <div class="skill-tag">Bubble.io</div>
+                        <div class="skill-tag">Fusion</div>
+                        <div class="skill-tag">Blender</div>
+                        <div class="skill-tag">Microsoft Power Platform</div>
+                        <div class="skill-tag">Microsoft Excel</div>
+                        <div class="skill-tag">SharePoint</div>
+                        <div class="skill-tag">Google Cloud</div>
+                        <div class="skill-tag">Git / GitHub</div>
+                        <div class="skill-tag">Airtable</div>
+                        <div class="skill-tag">Notion</div>
+                    </div>
+                    <h3 class="cs-label" style="margin-bottom: 3rem; margin-top: 3rem;">Languages / Frameworks</h3>
+                    <div class="skills-container">
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Next.js</div>
                         <div class="skill-tag">TypeScript</div>
                         <div class="skill-tag">Python (NLP)</div>
                         <div class="skill-tag">C++ (Embedded)</div>
@@ -168,15 +227,15 @@
         <div class="contact-block reveal">
             <div class="contact-item">
                 <span>EMAIL</span>
-                <a href="#">hello@d-eng.com</a>
+                <a href="#">efl226@lehigh.edu</a>
             </div>
             <div class="contact-item">
                 <span>LINKEDIN</span>
-                <a href="#">/in/designer-eng</a>
+                <a href="#">http://www.linkedin.com/in/ethan-lowey</a>
             </div>
             <div class="contact-item">
                 <span>GITHUB</span>
-                <a href="#">@git-builder</a>
+                <a href="#">https://github.com/efl226</a>
             </div>
         </div>
     </div>
