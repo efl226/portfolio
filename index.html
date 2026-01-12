@@ -16,7 +16,7 @@
 
     <!-- GLOBAL NAV -->
     <nav id="main-nav">
-        <div class="logo" onclick="showHome()">E.Lowey</div>
+        <div class="logo" onclick="showHome()">Ethan Lowey</div>
         <div class="nav-links">
             <a onclick="showHome()">Archive</a>
             <a onclick="showGallery()">Gallery</a>
@@ -45,8 +45,13 @@
     <!-- HOME VIEW -->
     <div id="home-view">
         <section class="hero">
-            <h1 class="reveal">Design <br> <span class="outline">& Machine</span></h1>
-            <p class="reveal">Bridging the gap between physical industrial design and high-performance engineering logic.</p>
+            <div class="hero-grid" >
+                <div>
+                     <h1 class="reveal">Design <br> <span class="outline">& Machine</span></h1>
+                     <p class="reveal">Bridging the gap between physical industrial design and high-performance engineering logic.</p>
+                </div>
+                <!-- <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/billboardpic.jpeg" style="width: 75%; height: auto;"class="hero-image reveal hero-img" alt="Profile"> -->
+            </div>
         </section>
 
         <div class="marquee">
@@ -154,13 +159,13 @@
             <div class="about-bio-grid">
                 <div class="bio-text reveal">
                     <h2>Hi!<br>I'm Ethan Lowey</h2>
-                    <p>I am a UX/UI and Product Designer at Lehigh University. I was born St. Louis, Missouri, lived in London, England, and now live in Pound Ridge, NY. 
+                    <p>I love all things product development. I am a double major in Computer Science and Product Design at Lehigh University. I was born St. Louis, Missouri, lived in London, England, and now live in Pound Ridge, NY. 
                         My goal in life is to find beauty through the worlds of art and science and use them to make the world a more sustainable and happy place!
 
                     </p>
                 </div>
                 <div class="reveal">
-                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000" class="bio-img" alt="Profile">
+                    <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/cityhallpic.png?auto=format&fit=crop&q=80&w=1000" class="bio-img" alt="Profile">
                 </div>
             </div>
         </section>
@@ -235,10 +240,10 @@
         </section>
 
         <!-- Section 3: Resume -->
-        <section class="resume-section reveal">
+        <section class="resume-section reveal" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
             <h3 class="cs-label">Full Resume</h3>
             <!-- Placeholder for Resume Image -->
-            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/resumephoto.png" class="resume-img">
+            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/resumephoto.png" class="resume-img" style="width: 35%; height: auto;">
             <!-- UPDATED BUTTON TO LINK -->
             <a href="https://raw.githubusercontent.com/efl226/portfolio/main/images/misc/Resume_Ethan Lowey_Official.pdf" target="_blank" class="back-btn" style="border-color: var(--accent); color: var(--accent); text-decoration: none; display: inline-block;">Download PDF</a>
         </section>

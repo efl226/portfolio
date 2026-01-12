@@ -567,7 +567,7 @@
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
                 
                 <header class="cs-hero reveal">
-                    <h1 class="cs-title">AromaAid:<br>Design for the Senses</h1>
+                    <h1 class="cs-title">Aroma Aid:<br>Design for the Senses</h1>
                     <div class="cs-meta-grid">
                         <div><span>Role</span>UX Researcher & Designer</div>
                         <div><span>Tech</span>Figma, Prototyping</div>
