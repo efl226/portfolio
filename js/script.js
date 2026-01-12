@@ -18,7 +18,10 @@
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
                 
                 <header class="cs-hero reveal">
-                    <h1 class="cs-title">Ipsos Growth Hub:<br>The Enterprise Brain</h1>
+                    <div style="display: flex; align-items: left; gap: 2rem;">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Ipsos_logo.svg" alt="Ipsos Logo" style="width: auto; height: 175px;">
+                            <h1 class="cs-title">Ipsos Growth Hub:<br>The Enterprise Brain</h1>
+                    </div> 
                     <div class="cs-meta-grid">
                         <div><span>Role</span>Lead Technical Architect</div>
                         <div><span>Stack</span>Power Platform, Vertex AI, SharePoint</div>
@@ -114,12 +117,15 @@
                     
                     <div class="cs-grid-2" style="margin-bottom: 4rem;">
                         <div>
-                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">The Heart of the Challenge: Unified Search</h4>
+                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1rem;">Unified Search</h4>
                             <p style="color: #aaa; margin-bottom: 1.5rem;">
-                                <strong>The Problem:</strong> How do you instantly pinpoint a single document across an entire US organization without overwhelming the user?
+                                <strong>The Problem:</strong> How do you pinpoint a specific document across an entire US organization?
                             </p>
                             <p style="color: #aaa;">
-                                Users shouldn't fight the filter bar. I designed a "Unified Search" engine that masks extreme complexity behind a simple UI. It combines deep-content keyword logic (looking <em>inside</em> files) with 9 distinct metadata tags. A single "Search" action aggregates all these criteria into one payload, dispatching it to the backend. It was essential to design something that didn't just list files, but quickly highlighted relevant info, allowing employees to assess value in milliseconds.
+                                Users shouldn't fight the filter bar. I designed a "Unified Search" engine that masks extreme complexity behind a simple UI. It combines deep-content 
+                                keyword logic (looking <em>inside</em> files) with 9 distinct metadata tags. A single "Search" action aggregates all these criteria into one payload, 
+                                dispatching it to the backend. It was essential to design something that didn't just list files, but quickly highlighted relevant infomation, allowing 
+                                employees to assess value in milliseconds.
                             </p>
                         </div>
                         <div>
@@ -261,7 +267,11 @@
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
                 
                 <header class="cs-hero reveal">
-                    <h1 class="cs-title">Sway:<br>Zero-to-One Event Management Software</h1>
+                        <div style="display: flex; align-items: left; gap: 2rem;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtcDmJyqK7725KWv84RLD7JaQnskWaQKchw&s" alt="Sway Logo" style="width: auto; height: 175px;">
+                            <h1 class="cs-title">Zero-to-One Event Management Software</h1>
+                        </div> 
+                    
                     <div class="cs-meta-grid">
                         <div><span>Role</span>Product Development and Management Intern</div>
                         <div><span>Tech</span>Figma, Bubble.io, Airtable, Stripe</div>
@@ -270,14 +280,17 @@
                     </div>
                 </header>
 
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=2000" class="full-width-img reveal" alt="Sway Platform Overview">
+                <img src="https://d2t0b1pkzfgfyi.cloudfront.net/prod/company/6564ca37e67eda001c3bf434/1701105194699_SWAY%20-%20Web%20Primary-min.png" class="full-width-img reveal" alt="Sway Platform Overview">
 
                 <section class="cs-section reveal">
+                        
                     <div class="cs-grid-2">
                         <div>
                             <span class="cs-label">The Startup Hustle</span>
                             <h2 class="cs-big-text">Intern to PM</h2>
-                            <p class="large-p" style="margin-top: 2rem;">Sway is an event management startup based in San Francisco, CA, that's goal is to allow users to use Sway to book and manage events all in one seamless experience, pairing venues with vendors and managing contracts, budgeting, invitations, and more. working with a team of three developers, I played a pivotal role in the development of Sway's MVP.</p>
+                            <p class="large-p" style="margin-top: 2rem;">
+                                Sway is a corporate event management and experience solutions company, providing full-service event planning, fractional event management, and venue sourcing for businesses and organizations. I played a pivotal role in the development of Sway's MVP, a full-service event management platform.
+                            </p>
 
                         </div>
                         <div>
@@ -358,31 +371,16 @@
                     </div>
                 </section>
 
-                <section class="cs-section reveal">
-                    <div class="cs-grid-2">
-                        <div class="cs-tech-diagram">
-                            <h4 style="color: white; margin-bottom: 1rem;">// LOW-CODE / HIGH-LOGIC</h4>
-                            <p>Architected a bridge between Figma designs and a functional Bubble.io frontend, powered by robust Airtable & Stripe pipelines.</p>
-                            <div class="code-snippet">
-                                <span class="fn">stripe.webhook</span> -> <span class="hl">Airtable Automation</span><br>
-                                <span class="fn">IF</span> status == 'succeeded':<br>
-                                &nbsp;&nbsp;<span class="hl">Bubble_DB</span>.update(booking_status)<br>
-                                &nbsp;&nbsp;<span class="hl">User_UI</span>.trigger(confetti_animation)
-                            </div>
-                        </div>
-                        <div>
-                            <span class="cs-label">Reflections</span>
-                            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Transparency is Key</h3>
-                            <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">Leading this project taught me that in FinTech, clarity isn't just aesthetic—it's functional. By prioritizing "Payment Transparency" and flexible "Management Suites," we reduced user anxiety and increased conversion.</p>
-                        </div>
-                    </div>
-                </section>
             `,
             bardive: `
                 <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
                 
                 <header class="cs-hero reveal">
-                    <h1 class="cs-title">BarDive:<br>Social Transparency for Nightlife</h1>
+                    <div style="display: flex; align-items: left; gap: 2rem;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/BarDive%20Logo%20SVG.svg" alt="BarDive Logo" style="width: auto; height: 175px;">
+                            <h1 class="cs-title">BarDive:<br>Social Transparency for Nightlife</h1>
+                    </div> 
+                    
                     <div class="cs-meta-grid">
                         <div><span>Role</span>Co-Founder & Lead Designer</div>
                         <div><span>Tech</span>React Native, Firebase, Google Maps API</div>
@@ -399,9 +397,6 @@
                             <p class="large-p" style="margin-top: 2rem;">
                                 Established in October 2024, my Co-Founder and I created BarDive, a mobile app that provides real-time insights into local bars, enabling college students to connect and engage with their social scene and community.
                             </p>
-                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/bardive/BarDive%20Logo%20SVG.svg" 
-                                style="width: 250px; height: auto; object-fit: cover; margin-top: 2rem;" 
-                                alt="BarDive App Home Screen Mockup">
                         </div>
                         <div style="border-left: 2px solid var(--accent); padding-left: 2rem; margin-top: 6rem;">
                             <h4 style="color: white; text-transform: uppercase; margin-bottom: 1.5rem;">My Contributions</h4>
@@ -567,6 +562,155 @@
                 <span class="cs-gallery-caption">Spotlight Mode</span></div><div class="cs-gallery-item">
                     <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172203.png">
                 <span class="cs-gallery-caption">Force-Directed Graph</span></div></div></section>
+            `,
+            aromaaid: `
+                <div class="back-nav"><button class="back-btn" onclick="showHome()">← Archive</button></div>
+                
+                <header class="cs-hero reveal">
+                    <h1 class="cs-title">AromaAid:<br>Design for the Senses</h1>
+                    <div class="cs-meta-grid">
+                        <div><span>Role</span>UX Researcher & Designer</div>
+                        <div><span>Tech</span>Figma, Prototyping</div>
+                        <div><span>Scope</span>Health & Wellness</div>
+                        <div><span>Year</span>2023</div>
+                    </div>
+                </header>
+
+                <!-- Hero Image Placeholder -->
+                <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/Aroma%20Aid%20Mockups%20scents.jpg" class="full-width-img reveal" style="object-fit: cover;" alt="AromaAid Hero">
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">Project Overview</span>
+                            <h2 class="cs-big-text">Sensory Rehabilitation</h2>
+                            <p class="large-p" style="margin-top: 2rem;">
+                                As part of a design case study, I was challenged to create a user experience centered around the sense of smell. I uncovered Smell Retention Therapy (SRT)—a process helping patients recover their senses post-COVID-19.
+                            </p>
+                        </div>
+                        <div style="border-left: 2px solid var(--accent); padding-left: 2rem;">
+                            <h4 style="color: white; text-transform: uppercase; margin-bottom: 1.5rem;">My Contributions</h4>
+                            <p style="color: #aaa;">
+                                AromaAid is a mobile app designed to support SRT patients by tracking progress and accessing essential products. I led user research, wireframing, and high-fidelity prototyping to create an intuitive experience for sensory recovery.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">UX Research</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 4rem;">The Science of Smell</h2>
+                    
+                    <div class="cs-grid-2">
+                        <div>
+                            <h4 style="color: white; margin-bottom: 1rem;">The Problem Space</h4>
+                            <p style="color: #aaa; margin-bottom: 2rem;">
+                                According to a National Library of Medicine study on smell loss due to COVID-19, <strong>54.7%</strong> of people are only partially recovered, and <strong>7.5%</strong> have had no recovery after two years.
+                            </p>
+                            <h4 style="color: white; margin-bottom: 1rem;">Smell Retention Therapy (SRT)</h4>
+                            <p style="color: #aaa;">
+                                SRT helps the brain reorganize itself via neuroplasticity. Patients sniff four essential oils (rose, eucalyptus, cloves, lemon) multiple times a day for at least 12 weeks to retrain their brain.
+                            </p>
+                        </div>
+                        <div style="background: var(--surface); padding: 2rem; border: 1px solid var(--border);">
+                            <h4 style="color: var(--accent); margin-bottom: 1.5rem; text-transform: uppercase;">The Solution</h4>
+                            <ul style="list-style: none; color: #ccc; line-height: 1.8;">
+                                <li>1. A mobile application that tracks scent training</li>
+                                <li>2. Instructs people on daily therapy sessions</li>
+                                <li>3. Provides a timer and visuals to enhance effects</li>
+                                <li>4. Tracks progress through data analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">Visual Identity</span>
+                            <h2 class="cs-big-text">Style Tile & Trust</h2>
+                            <p style="color: #aaa; margin-top: 1rem;">
+                                I chose a color palette similar to modern fitness and health apps. This familiarity is crucial; as a therapy app, building immediate user trust is paramount to the product's success.
+                            </p>
+                        </div>
+                        <div>
+                            <!-- Placeholder for Style Tile Image -->
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/style%20tile.png" style="width: 100%; border: 1px solid var(--border); background-color: #fff; padding: 1rem;" alt="Style Tile">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">Prototyping</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 3rem;">Low-Fidelity Framework</h2>
+                    <div class="cs-grid-2">
+                        <div>
+                            <p style="color: #aaa; margin-bottom: 2rem;">My main motivations behind the low-fidelity prototypes were:</p>
+                            <ul class="cs-impact-list" style="color: #ccc;">
+                                <li>Make therapy accessible/trackable as the main page.</li>
+                                <li>Enhance the process with visuals and timers.</li>
+                                <li>Create a simplified hub with only 5 core navigation options.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <!-- Placeholder for Lo-Fi Image -->
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/wireframes.png" style="width: 100%; border: 1px solid var(--border);" alt="Wireframes">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <span class="cs-label">Final Design</span>
+                    <h2 class="cs-big-text" style="margin-bottom: 4rem;">High-Fidelity Flow</h2>
+                    
+                    <!-- Gallery Grid for Final Designs -->
+                    <div class="cs-gallery-grid" style="grid-template-columns: repeat(4, 1fr);">
+                        <div class="cs-gallery-item" style="grid-column: span 1;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/Tracking(New).jpg" alt="Therapy Start Page">
+                            <span class="cs-gallery-caption">Therapy Start</span>
+                        </div>
+                        <div class="cs-gallery-item" style="grid-column: span 1;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/Rose%20Next.png" alt="Smell Phase">
+                            <span class="cs-gallery-caption">Smell Phase</span>
+                        </div>
+                        <div class="cs-gallery-item" style="grid-column: span 1;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/Visual.png" alt="Rating Phase">
+                            <span class="cs-gallery-caption">Rating Phase</span>
+                        </div>
+                        <div class="cs-gallery-item" style="grid-column: span 1;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/Rose%20Rest.png" alt="Progress Page">
+                            <span class="cs-gallery-caption">Progress Page</span>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="cs-gallery-item" style="grid-column: span 2;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/4%20main%20screens.png" alt="Calendar View">
+                            <span class="cs-gallery-caption">Calendar Month-View</span>
+                        </div>
+                        <div class="cs-gallery-item" style="grid-column: span 2;">
+                            <img src="https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/scent%20test.jpg" alt="Smell Strength Summary">
+                            <span class="cs-gallery-caption">Smell Strength Summary</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cs-section reveal">
+                    <div class="cs-grid-2">
+                        <div>
+                            <span class="cs-label">Conclusion</span>
+                            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Closing the Market Gap</h3>
+                            <p style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">
+                                I identified a critical gap: there was no interface to track the progress of a patient undergoing SRT. AromaAid provides tracking, analysis, and visual guides to help users complete their therapy.
+                            </p>
+                        </div>
+                        <div style="background: #111; padding: 2rem; border: 1px dashed var(--border);">
+                            <h4 style="color: #888; text-transform: uppercase; margin-bottom: 1rem;">Reflections & Next Steps</h4>
+                            <p style="color: #ccc; font-style: italic;">
+                                "The interface has areas for improvement. I assumed users were familiar with the therapy process; moving forward, I would develop an analysis page to better inform users of their progress and refine the onboarding flow to be more educational."
+                            </p>
+                        </div>
+                    </div>
+                </section>
             `
         };
 
