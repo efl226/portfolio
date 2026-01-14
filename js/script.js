@@ -20,7 +20,7 @@
                 <header class="cs-hero reveal">
                     <div style="display: flex; align-items: left; gap: 2rem;">
                             <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Ipsos_logo.svg" alt="Ipsos Logo" style="width: auto; height: 175px;">
-                            <h1 class="cs-title">Ipsos Growth Hub:<br>The Enterprise Brain</h1>
+                            <h1 class="cs-title">Ipsos Growth Hub:<br>The Enterprise App</h1>
                     </div> 
                     <div class="cs-meta-grid">
                         <div><span>Role</span>Lead Technical Architect</div>
@@ -725,10 +725,24 @@
                 ] 
             },
             { 
-                title: "Aroma Aid", 
-                desc: "UX Case Study: Designing an app for scent rehabilitation.", 
+                title: "Resonant Design", 
+                desc: "Capstone Project (On-Going): Hybrid music archive system using NLP processing and React Framework.", 
                 images: [
-                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/aromaaid/two%20phones.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20171956.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172114.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172150.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/resonantdesign/Screenshot%202025-12-26%20172203.png"
+                ] 
+            },
+            { 
+                title: "Silo Lamp", 
+                desc: "Metalworking Project: A lamp inspired by birds eye view of farm landscapes", 
+                images: [
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/finalimage.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/firstdrafts.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/finaldraft.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/3d%20render.png"
+
                 ] 
             },
             { 
