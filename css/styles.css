@@ -539,6 +539,41 @@
             margin-bottom: 2rem;
         }
 
+        /* === NEW HEADER STYLES FOR MOBILE/LOGO SUPPORT === */
+        .cs-header-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .cs-header-logo {
+            width: auto;
+            height: 175px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .cs-hero {
+                padding: 8rem 5% 4rem; /* Reduce padding on mobile */
+            }
+            .cs-header-row {
+                flex-direction: column; /* Stack logo and title */
+                gap: 1rem;
+            }
+            .cs-header-logo {
+                height: auto;
+                max-width: 150px; /* Restrict size on mobile */
+                max-height: 100px;
+                margin-bottom: 1rem;
+            }
+            .cs-title {
+                font-size: 2.5rem; /* Smaller text for mobile fit */
+                line-height: 1.1;
+                margin-bottom: 1rem;
+            }
+        }
+        /* ================================================= */
+
         .cs-meta-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
