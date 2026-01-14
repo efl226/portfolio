@@ -739,9 +739,12 @@
                 desc: "Metalworking Project: A lamp inspired by birds eye view of farm landscapes", 
                 images: [
                     "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/finalimage.jpg",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/679b6c0edd06dbd924a93568_DXF%20for%20portfolio-p-2000.png",
+                    "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/679b6c18e0ed64c35064061f_farmland%201.png",
                     "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/firstdrafts.jpg",
                     "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/finaldraft.jpg",
                     "https://raw.githubusercontent.com/efl226/portfolio/main/images/industrialDesign/lamp/3d%20render.png"
+                    
 
                 ] 
             },
